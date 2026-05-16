@@ -19,15 +19,15 @@ CHECKLIST FOR THIS PAGE:
 
 
 <div class="hero">
-  <img src="assets/images/profile.png" alt="[YOUR NAME]" class="profile-photo">
-  <h1>[YOUR NAME]</h1>
-  <p><strong>[YOUR JOB TITLE]</strong></p>
+  <img src="assets/images/profile.jpg" alt="Abdou Aziz Darc" class="profile-photo">
+  <h1>Abdou Aziz Darc</h1>
+  <p><strong>Géographe, Géomaticien</strong></p>
   <p><em>[YOUR TAGLINE — e.g., Turning spatial data into insights | GIS | Remote Sensing | Python]</em></p>
 </div>
 
 ---
 
-## About Me
+## A propos de moi
 
 <div class="about-section" markdown>
 <div class="about-text" markdown>
@@ -107,6 +107,8 @@ planning. I am currently seeking opportunities in [YOUR TARGET ROLE] in [YOUR TA
     - Data formats: GeoJSON, GeoTIFF, NetCDF, Zarr, GeoParquet
 
 -   :material-airplane:{ .lg .middle } **Drone / UAV Data Processing**
+
+    ---  
 
     - Mission planning and flight operations
     - Photogrammetry: Agisoft Metashape, OpenDroneMap
