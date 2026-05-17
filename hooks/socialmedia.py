@@ -13,7 +13,10 @@ def on_page_markdown(markdown, **kwargs):
     if page.meta.get('template') != 'blog-post.html': 
         return markdown
 
-    page_url = config.site_url + page.url
+    # Sécurisation de la construction de l'URL pour éviter le crash CI/CD
+    base_url = config.site_url or "https://xootayugox.github.io"
+    page_url = f"{base_url.rstrip('/')}/{page.url}"
+    
     page_title = urllib.parse.quote(page.title + '\n')
 
     # Utilisation de Flexbox pour un alignement dynamique et espacé
