@@ -111,3 +111,22 @@
   border-radius: 4px;
   margin-bottom: 0.75rem;
 }
+
+
+/* --- BLOG PREVIEW --- */
+.blog-preview ul {
+  list-style: none;
+  padding: 0;
+  margin: 1rem 0;
+}
+ 
+.blog-preview li {
+  padding: 0.75rem 0;
+  border-bottom: 1px solid var(--md-default-fg-color--lightest);
+  font-size: 0.9rem;
+  line-height: 1.6;
+}
+ 
+.blog-preview li:last-child {
+  border-bottom: none;
+}

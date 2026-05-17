@@ -1,0 +1,7 @@
+# docs/blog/.authors.yml
+# Ce fichier définit ton profil auteur pour tous les articles du blog
+authors:
+  darc:
+    name: Abdou Aziz Darc
+    description: Géographe · Technicien Supérieur en Géomatique · Télépilote
+    avatar: https://github.com/Darcman0.png

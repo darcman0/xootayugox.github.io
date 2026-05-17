@@ -18,6 +18,11 @@ theme:
   # Icon used as both the site logo (header) and browser favicon.
   # Browse icons at https://squidfunk.github.io/mkdocs-material/reference/icons-emojis/
   # and replace "material/earth" with any "material/..." icon name you prefer.
+  font:
+    text: open sans
+    code: Roboto Mono
+  language: fr
+
   icon:
     logo: material/earth
   palette:
@@ -44,9 +49,7 @@ theme:
     - navigation.instant         # chargement instantané les clics sur les liens internes sont interceptés et gérés via XHR 2 pour éviter de recharger toute la page 
     - navigation.instant.progress # Progression du chargement de la page
     - content.code.copy          # Copy button on all code blocks
-  font:
-    text: open sans
-    code: Roboto Mono
+    
 
 extra_css:
   - assets/css/extra.css
@@ -61,23 +64,32 @@ markdown_extensions:
   - pymdownx.emoji:   # Renders :material-icon: and :fontawesome-brands-icon: inline icons
       emoji_index: !!python/name:material.extensions.emoji.twemoji
       emoji_generator: !!python/name:material.extensions.emoji.to_svg
+  
+plugins:
+  - search
+  - meta
+  - mkdocs-jupyter
+  - blog:
+      archive_date_format: MM/yyyy
+      archive_url_date_format: MM/yyyy
+      post_url_format: "{slug}"
 
-copyright: "Copyright &copy; Darc Abdou Aziz"
+
+hooks:
+  - hooks/socialmedia.py  # pour partager les articles sur les réseaux sociaux
+
+
+  
+copyright: "Copyright &copy; Abdou Aziz Darc - Xootayu gox yi"
 
 extra:
   social:
     - icon: fontawesome/brands/github
       link: https://github.com/Darcman0
     - icon: fontawesome/brands/linkedin
-      link: https://linkedin.com/in/[YOUR-LINKEDIN-USERNAME]
-    - icon: material/email
-      link: mailto:[YOUR-EMAIL-ADDRESS]
-
-
-plugins:
-  - search
-  - meta
-  - mkdocs-jupyter
+      link: https://www.linkedin.com/in/abdou-aziz-darc-678478169/
+    - icon: fontawesome/brands/youtube
+      link: https://www.youtube.com/channel/UCpCPomvreB7IL20DtQ7-F8Q
 
 nav:
   - Accueil: index.md
@@ -93,4 +105,6 @@ nav:
     # 4. Add a project card on docs/projects/index.md
   - Publications: publications.md
   - Experience: experience.md
+  - blog: 
+    - blog/index.md
   - Contact: contact.md
