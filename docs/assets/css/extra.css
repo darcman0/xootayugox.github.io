@@ -12,7 +12,7 @@
 .hero {
   text-align: center;
   padding: 1rem 1rem 1.25rem 1rem;
-  background: linear-gradient(135deg, #e8f4f8 0%, #f0f7ff 50%, #e8f0fe 100%);
+  
   border-radius: 8px;
 }
 
@@ -88,21 +88,20 @@
 }
 
 /* Skills grid cards on the Home page */
-.md-typeset .grid.cards > ul > li {
-  background-color: #f0f7ff;
-}
+/*.md-typeset .grid.cards > ul > li {
+   background-color: #939699; 
+}*/
 
 /* Project cards on the Projects gallery page */
 .project-card {
   border: 1px solid var(--md-default-fg-color--lightest);
   border-radius: 8px;
   padding: 1rem;
-  background-color: #f0f7ff;
   transition: box-shadow 0.2s;
 }
 
 .project-card:hover {
-  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.12);
+  box-shadow: 0 4px 16px rgba(3, 7, 252, 0.616);
 }
 
 .project-card img {

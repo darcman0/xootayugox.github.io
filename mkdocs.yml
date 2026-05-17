@@ -29,17 +29,20 @@ theme:
       primary: indigo
       accent: blue
       toggle:
-        icon: material/brightness-7
+        icon: material/weather-night
         name: Switch to dark mode
+
     - scheme: slate              # Dark mode
-      primary: indigo
-      accent: blue
+      primary: teal
+      accent: deep orange
       toggle:
-        icon: material/brightness-4
+        icon: material/weather-sunny
         name: Switch to light mode
   features:
     - navigation.tabs            # Top-level nav items shown as horizontal tabs
     - navigation.top             # Back-to-top button when scrolling up
+    - navigation.instant         # chargement instantané les clics sur les liens internes sont interceptés et gérés via XHR 2 pour éviter de recharger toute la page 
+    - navigation.instant.progress # Progression du chargement de la page
     - content.code.copy          # Copy button on all code blocks
   font:
     text: open sans
@@ -77,9 +80,9 @@ plugins:
   - mkdocs-jupyter
 
 nav:
-  - Home: index.md
-  - Projects:
-    - "All Projects": projects/index.md
+  - Accueil: index.md
+  - Projets:
+    - "Tous mes projets": projects/index.md
     - "Sample Project": projects/sample-project.md
     - "Jupyter Notebook Project": projects/sample-notebook.ipynb
     # HOW TO ADD A NEW PROJECT:

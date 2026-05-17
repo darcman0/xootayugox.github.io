@@ -12,7 +12,7 @@ CHECKLIST FOR THIS PAGE:
 - [ ] Delete placeholder cards you don't need yet
 -->
 
-# Projects
+# Projets
 
 A selection of my geospatial projects. Click any card to see the full write-up.
 
@@ -37,6 +37,32 @@ and what you found or built.]
 **[Sample Notebook](sample-notebook.ipynb)**
 
 [YOUR PROJECT DESCRIPTION — one or two sentences: what you did, what data you used,
+and what you found or built.]
+
+`Python` `pandas` `Folium`
+
+[View Project →](sample-notebook.ipynb){ .md-button }
+</div>
+
+<div class="project-card" markdown>
+![](../assets/images/placeholder-notebook.png)
+
+**[Sample Notebook](sample-notebook.ipynb)**
+
+[3 PROJECT DESCRIPTION — one or two sentences: what you did, what data you used,
+and what you found or built.]
+
+`Python` `pandas` `Folium`
+
+[View Project →](sample-notebook.ipynb){ .md-button }
+</div>
+
+<div class="project-card" markdown>
+![](../assets/images/placeholder-notebook.png)
+
+**[Sample Notebook](sample-notebook.ipynb)**
+
+[4 PROJECT DESCRIPTION — one or two sentences: what you did, what data you used,
 and what you found or built.]
 
 `Python` `pandas` `Folium`
