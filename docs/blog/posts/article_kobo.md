@@ -10,7 +10,7 @@ categories:
 
 # Connection de l'API V1 de Kobotoolbox avec Microsoft Excel
 
-![](../assets/kobo_api_v1/article_presentation_img.jpg)
+![](../assets/kobo_api_v1/article_presentation_img.jpg){.img-center}
 ---
 Cela vous est-il déjà arrivé d’avoir la flemme de vous rendre sur le site de [Kobotoolbox](https://kc.kobotoolbox.org/) pour télécharger vos données issues de votre campagne de collecte?
 
