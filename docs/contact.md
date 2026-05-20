@@ -12,7 +12,7 @@ Une mission, une collaboration, une question sur ce que vous avez trouv√© ici ‚Ä
 | Plateforme| ou|
 |---|---|
 | :material-email: **Email** | [darcman8@gmail.com](mailto:darcman8@gmail.com) |
-| :fontawesome-brands-github: **GitHub** | [github.com/Darcman0](https://github.com/Darcman0) |
+| :fontawesome-brands-github: **GitHub** | [github.com/darcman0](https://github.com/darcman0) |
 | :fontawesome-brands-gitlab: **GitLab** | [gitlab.com/darcman0](https://gitlab.com/darcman0) |
 | :fontawesome-brands-linkedin: **LinkedIn** | [linkedin.com/in/abdou-aziz-darc](https://linkedin.com/in/abdou-aziz-darc) |
 
