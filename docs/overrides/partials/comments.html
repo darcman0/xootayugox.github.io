@@ -1,7 +1,7 @@
 {% if page.meta.comments != false and "blog/" in page.url %}
 <h2 id="commentaires">Commentaires</h2>
 
-{% if not config.dev_addr %}
+{% if config.site_url and "localhost" not in config.site_url and "127.0.0.1" not in config.site_url %}
 <script src="https://giscus.app/client.js"
         data-repo="Darcman0/xootayugox.github.io"
         data-repo-id="R_kgDOSfasYQ"
@@ -17,10 +17,10 @@
         crossorigin="anonymous"
         async>
 </script>
-
+{% else %}
 <p style="color: var(--md-default-fg-color--light); font-style: italic; font-size: 0.85rem;">
-    💬 Les commentaires sont disponibles une fois le site déployé en ligne.
-  </p>
-
+  💬 Les commentaires sont disponibles une fois le site déployé en ligne.
+</p>
 {% endif %}
+
 {% endif %}
