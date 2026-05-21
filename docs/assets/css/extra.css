@@ -12,20 +12,16 @@
 .hero {
   text-align: center;
   padding: 1rem 1rem 1.25rem 1rem;
-  
   border-radius: 8px;
 }
-
 .hero h1 {
   margin-top: 0.25rem;
   margin-bottom: 0.25rem;
 }
-
 .hero p {
   margin-top: 0;
   margin-bottom: 0.25rem;
 }
-
 .hero + hr {
   margin-top: 0.5rem;
 }
@@ -36,21 +32,17 @@
   gap: 2rem;
   align-items: center;
 }
-
 .about-text {
   flex: 1;
 }
-
 .about-image {
   flex: 0 0 auto;
 }
-
 .about-image img {
   width: 400px;
   border-radius: 8px;
   display: block;
 }
-
 @media (max-width: 600px) {
   .about-section {
     flex-direction: column;
@@ -65,12 +57,10 @@
   padding-left: 1.75rem;
   border-left: 3px solid var(--md-primary-fg-color--light);
 }
-
 .timeline-entry {
   position: relative;
   margin-bottom: 1.75rem;
 }
-
 .timeline-entry::before {
   content: '';
   position: absolute;
@@ -82,28 +72,37 @@
   background-color: var(--md-primary-fg-color);
   border: 2px solid var(--md-default-bg-color);
 }
-
 .timeline-entry h3 {
   margin-top: 0;
 }
 
-/* Skills grid cards on the Home page */
-/*.md-typeset .grid.cards > ul > li {
-   background-color: #939699; 
-}*/
+/* ============================================
+   HOVER DISCRET — toutes les cartes du site
+   Bordure colorée douce, sans fond criard
+   ============================================ */
 
-/* Project cards on the Projects gallery page */
+/* Cartes MkDocs Material natives (.grid.cards) */
+.md-typeset .grid.cards > ul > li {
+  transition: border-color 0.25s ease, transform 0.2s ease;
+}
+.md-typeset .grid.cards > ul > li:hover {
+  border-color: var(--md-primary-fg-color--light) !important;
+  transform: translateY(-2px);
+  box-shadow: none !important;
+}
+
+/* Project cards */
 .project-card {
   border: 1px solid var(--md-default-fg-color--lightest);
   border-radius: 8px;
   padding: 1rem;
-  transition: box-shadow 0.2s;
+  transition: border-color 0.25s ease, transform 0.2s ease;
 }
-
 .project-card:hover {
-  box-shadow: 0 4px 16px rgba(3, 7, 252, 0.616);
+  border-color: var(--md-primary-fg-color--light);
+  transform: translateY(-2px);
+  box-shadow: none;
 }
-
 .project-card img {
   width: 100%;
   height: 180px;
@@ -112,47 +111,39 @@
   margin-bottom: 0.75rem;
 }
 
-
-/* --- BLOG PREVIEW --- */
+/* Blog preview */
 .blog-preview ul {
   list-style: none;
   padding: 0;
   margin: 1rem 0;
 }
- 
 .blog-preview li {
   padding: 0.75rem 0;
   border-bottom: 1px solid var(--md-default-fg-color--lightest);
   font-size: 0.9rem;
   line-height: 1.6;
+  transition: border-color 0.25s ease;
 }
- 
+.blog-preview li:hover {
+  border-bottom-color: var(--md-primary-fg-color--light);
+}
 .blog-preview li:last-child {
   border-bottom: none;
 }
 
-
 /* ---- IMAGE ALIGNMENT ---- */
-
-/* Centré */
 .img-center {
   display: block;
   margin: 1.5rem auto;
 }
-
-/* Droite */
 .img-right {
   float: right;
   margin: 0 0 1rem 1.5rem;
 }
-
-/* Gauche */
 .img-left {
   float: left;
   margin: 0 1.5rem 1rem 0;
 }
-
-/* Nettoyage du float après image gauche/droite */
 .img-clear {
   clear: both;
 }
