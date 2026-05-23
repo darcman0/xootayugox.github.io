@@ -56,6 +56,8 @@ theme:
 
 extra_css:
   - assets/css/extra.css
+extra_javascript:
+  - assets/js/cards.js
 
 markdown_extensions:
   - md_in_html        # Allows Markdown inside HTML blocks (used for project cards)
@@ -73,6 +75,8 @@ plugins:
   - search
   - meta
   - mkdocs-jupyter
+  - awesome-pages # ajouts de macro
+  - macros #
 
   - blog:
       archive_date_format: MM/yyyy
@@ -112,7 +116,9 @@ nav:
     # 4. Add a project card on docs/projects/index.md
   - Publications: publications.md
   - App:
-    - apps/index.md
+    - app/index.md
+    - app/apps/test_1.md
+    - app/apps/test_2.ipynb
   - Blog: 
     - blog/index.md
   - Contact: contact.md
