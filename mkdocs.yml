@@ -95,22 +95,20 @@ nav:
   - Accueil: index.md
 
   - Réalisations:
-    - "Tous mes projets": project/index.md
+    - "Tous mes projets": realisations/index.md
     # Ajouter ici les projets .md et .ipynb 
-    - "mangrove": project/projects/mangroves-weforest.md
-    - "sample project": project/projects/project.md
-    - "sample nootebook": project/projects/notebook.ipynb
-    - "project 4": project/projects/centrale-pv-kolda.ipynb
-    - "project 5": project/projects/pedologie-senegal.ipynb
+    - "mangrove": realisations/projects/mangroves-weforest.md
+    - "sample project": realisations/projects/project.md
+    - "sample nootebook": realisations/projects/notebook.ipynb
+    - "project 4": realisations/projects/centrale-pv-kolda.ipynb
+    - "project 5": realisations/projects/pedologie-senegal.ipynb
 
-  - App:
-    - app/index.md
     # Ajouter ici les apps .md et .ipynb
-    - "Geocoding SN": app/apps/test_1.md
-    - "Analyse NDVI": app/apps/test_2.ipynb
-    - "App 3": app/apps/metashape-batch.ipynb
-    - "App 4": app/apps/pyqgis-pdf-exporter.md
-    - "App 5": app/apps/webgis-viewer.ipynb
+    - "Geocoding SN": realisations/apps/test_1.md
+    - "Analyse NDVI": realisations/apps/test_2.ipynb
+    - "App 3": realisations/apps/metashape-batch.ipynb
+    - "App 4": realisations/apps/pyqgis-pdf-exporter.md
+    - "App 5": realisations/apps/webgis-viewer.ipynb
 
   - Publications: publications.md
 

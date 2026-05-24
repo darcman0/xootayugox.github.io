@@ -51,7 +51,6 @@ def get_items(docs_dir, subfolder):
     for filename in sorted(os.listdir(folder)):
         if filename in ["index.md", ".pages"]:
             continue
-            
         if filename.startswith("_"):
             continue
 
@@ -81,19 +80,34 @@ def define_env(env):
     docs_dir = env.conf["docs_dir"]
 
     @env.macro
-    def render_apps():
-        items = get_items(docs_dir, os.path.join("app", "apps"))
-        return _render_cards(items, "apps")
-
-    @env.macro
     def render_projects():
-        items = get_items(docs_dir, os.path.join("project", "projects"))
+        """Génère les cartes pour les projets terrain"""
+        items = get_items(docs_dir, os.path.join("realisations", "projects"))
         return _render_cards(items, "projects")
 
+    @env.macro
+    def render_apps():
+        """Génère les cartes pour les apps & scripts"""
+        items = get_items(docs_dir, os.path.join("realisations", "apps"))
+        return _render_cards(items, "apps")
+
 def _render_cards(items, section):
-    """Génère la grille de cartes."""
+    """Génère la grille de cartes au format MkDocs Material."""
     if not items:
         return "<p><em>Aucun élément pour l'instant.</em></p>"
+
+    # Badge de type selon la section
+    if section == "projects":
+        type_badge = '<span style="font-size:0.75rem;font-weight:600;padding:2px 8px;border-radius:12px;background:#e6f1fb;color:#185fa5">🗺️ Projet terrain</span>'
+    else:
+        type_badge = '<span style="font-size:0.75rem;font-weight:600;padding:2px 8px;border-radius:12px;background:#d4edda;color:#155724">🐍 App & Script</span>'
+
+    # Couleurs statut
+    status_colors = {
+        "terminé":  ("#d4edda", "#155724", "✓ Terminé"),
+        "en cours": ("#fff3cd", "#856404", "⟳ En cours"),
+        "idée":     ("#e2e3e5", "#383d41", "✦ Idée"),
+    }
 
     cards = []
 
@@ -106,47 +120,36 @@ def _render_cards(items, section):
         file_slug   = item.get("_file", "")
         notebook    = item.get("_notebook", False)
 
+        # --- Image ---
         if image:
             img_line = f"![{title}]({image})"
-        elif section == "apps":
-            if notebook:
-                img_line = "![](../app/assets/placeholder-notebook.png)"
-            else:
-                img_line = "![](../app/assets/placeholder-project.png)"
+        elif notebook:
+            img_line = "![](../../assets/images/placeholder-notebook.png)"
         else:
-            if notebook:
-                img_line = "![](../assets/images/placeholder-notebook.png)"
-            else:
-                img_line = "![](../assets/images/placeholder-project.png)"
+            img_line = "![](../../assets/images/placeholder-project.png)"
 
-        status_colors = {
-            "terminé":  ("#d4edda", "#155724", "✓ Terminé"),
-            "en cours": ("#fff3cd", "#856404", "⟳ En cours"),
-            "idée":     ("#e2e3e5", "#383d41", "✦ Idée"),
-        }
+        # --- Badge statut ---
         sc = status_colors.get(status.lower()) if status else None
         status_badge = (
             f'<span style="font-size:0.75rem;font-weight:600;padding:2px 8px;'
             f'border-radius:12px;background:{sc[0]};color:{sc[1]}">{sc[2]}</span>'
         ) if sc else ""
 
+        # --- Badge notebook ---
         notebook_badge = (
             '<span style="font-size:0.75rem;font-weight:600;padding:2px 8px;'
-            'border-radius:12px;background:#e6f1fb;color:#185fa5;margin-left:4px">'
+            'border-radius:12px;background:#f3e8ff;color:#6b21a8;margin-left:4px">'
             '📓 Notebook</span>'
         ) if notebook else ""
 
-        badges = f"{status_badge}{notebook_badge}" if (status_badge or notebook_badge) else ""
+        # --- Tous les badges ---
+        badges = f"{type_badge} {status_badge}{notebook_badge}"
+
+        # --- Tags ---
         tags_str = " ".join([f"`{t}`" for t in tags]) if tags else ""
 
-        ext = ".ipynb" if notebook else ".md"
-        if section == "projects":
-            href = f"projects/{file_slug}{ext}"
-        elif section == "apps":
-            href = f"apps/{file_slug}{ext}"
-        else:
-            href = f"{file_slug}{ext}"
-            
+        # --- Bouton — toujours vers la page interne ---
+        href = f"{section}/{file_slug}/"
         btn_label = "Ouvrir le Notebook →" if notebook else "Lire →"
 
         card = f"""<div class="project-card" markdown>
