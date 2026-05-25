@@ -6,7 +6,7 @@ hide:
 
 ## Xootay Gox Yi
 
-> _**Xootay**_, c'est regarder. Regarder loin, regarder en profondeur.
+> _**Xootay**_, c'est la profondeur, celle qu'on atteint en regardant vraiment.
 
 > _**Gox yi**_, ce sont les territoires: ces espaces que l'on arpente, que l'on survole, que l'on mesure.
 
@@ -22,13 +22,13 @@ Tu y trouveras de la cartographie, du code, des réflexions de terrain. Et peut-
 
 <div class="grid cards" markdown>
 
--   :material-map:{ .lg .middle } **Projets**
+-   :material-map:{ .lg .middle } **Réalisations**
 
     ---
 
-    Missions de cartographie drone, analyses SIG, études pédologiques, levés topographiques : des réalisations concrètes avec leurs méthodes et leurs livrables.
+    Projets terrain, scripts géospatiaux, outils d'automatisation et applications — du drone sur le terrain au code sur le serveur.
 
-    [Voir les projets :material-arrow-right:](project/index.md){ .md-button }
+    [Voir les réalisations :material-arrow-right:](realisations/index.md){ .md-button }
 
 -   :material-post:{ .lg .middle } **Blog**
 
@@ -38,21 +38,14 @@ Tu y trouveras de la cartographie, du code, des réflexions de terrain. Et peut-
 
     [Lire le blog :material-arrow-right:](blog/index.md){ .md-button }
 
--   :material-flask:{ .lg .middle } **Applications & Lab**
-
-    ---
-
-    Scripts géospatiaux, outils d'automatisation et applications en développement : des expérimentations issues du terrain et hébergées sur GitLab.
-
-    [Voir les applications :material-arrow-right:](app/index.md){ .md-button }
-
 -   :material-file-document:{ .lg .middle } **Publications**
 
     ---
 
     Mémoires académiques, rapports de recherche et productions écrites : des travaux sur l'hydrologie, la géomatique et l'environnement au Sénégal.
 
-    [Voir les publications :material-arrow-right:](publications/index.md){ .md-button }
+    [Voir les publications :material-arrow-right:](publications.md){ .md-button }
+
 
 </div>
 

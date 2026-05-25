@@ -150,7 +150,7 @@ def _render_cards(items, section):
 
         # --- Bouton — toujours vers la page interne ---
         href = f"{section}/{file_slug}/"
-        btn_label = "Ouvrir le Notebook →" if notebook else "Lire →"
+        btn_label = "En savoir plus →"
 
         card = f"""<div class="project-card" markdown>
 {img_line}
