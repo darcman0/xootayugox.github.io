@@ -9,13 +9,10 @@ hide:
 Une mission, une collaboration, une question sur ce que vous avez trouvé ici. Je suis disponible et joignable via les canaux ci-dessous.
 
 ---
-| Plateforme| lien|
-|---|---|
-| :material-email: **Email** | [darcman8@gmail.com](mailto:darcman8@gmail.com) |
-| :fontawesome-brands-github: **GitHub** | [github.com/darcman0](https://github.com/darcman0) |
-| :fontawesome-brands-gitlab: **GitLab** | [gitlab.com/darcman0](https://gitlab.com/darcman0) |
-| :fontawesome-brands-linkedin: **LinkedIn** | [linkedin.com/in/abdou-aziz-darc](https://linkedin.com/in/abdou-aziz-darc) |
 
 
+[Me laisser un mail :material-email:](mailto:darcman8@gmail.com){ .md-button .md-button--primary }
+[Visiter mon Github :fontawesome-brands-github:](https://github.com/darcman0){ .md-button .md-button--primary }
+[Visiter mon Gitlab :fontawesome-brands-gitlab:](https://gitlab.com/darcman0){ .md-button .md-button--primary }
+[Me retrouver sur Linkedin :fontawesome-brands-linkedin:](https://linkedin.com/in/abdou-aziz-darc){ .md-button .md-button--primary }
 
-[Télécharger mon CV :material-download:](assets/CV_2026_Abdou_Aziz_Darc.pdf){ .md-button .md-button--primary }

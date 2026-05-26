@@ -9,19 +9,15 @@ categories:
   - Synchronisation
 description: "Guide technique pour automatiser la récupération de données Kobotoolbox vers Excel via l'API V1, éliminant les exports manuels répétitifs."
 ---
-
 # Connexion de l'API V1 de Kobotoolbox avec Microsoft Excel
 
 ![Illustration](../assets/kobo_api_v1/article_presentation_img.jpg){.img-center}
 
-### Contexte et mise en œuvre
-On connaît tous la routine : se connecter à Kobo, exporter, nettoyer, puis importer dans Excel. C'est long, c'est pénible, et on finit toujours par travailler sur une version obsolète de la base. 
+## Contexte et mise en œuvre
+Dans la gestion de projets de terrain, le traitement de la donnée vire souvent à la corvée mécanique. On se retrouve quotidiennement à répéter les mêmes actions : extraire depuis Kobo, filtrer les lignes, actualiser les tableaux de bord à la main. En plus d'être pénible, cette méthode expose à des versions de bases de données désynchronisées. L'alternative consiste à automatiser ce flux : grâce à l'API V1 de Kobotoolbox, on peut configurer une passerelle transparente pour qu'Excel interroge directement le serveur.
 
 <!-- more -->
-
-L'astuce ici, c'est d'utiliser l'API V1 de Kobotoolbox pour créer un pont direct entre le serveur et Excel.
-
-**1. Récupérer l'URL API**
+## 1. Récupérer l'URL de l'API
 Connectez-vous à votre compte Kobo et allez ici : [https://kc.kobotoolbox.org/api/v1/data](https://kc.kobotoolbox.org/api/v1/data).
 
 Cliquez sur la flèche à côté de **GET**, sélectionnez **JSON**.
@@ -41,10 +37,8 @@ Une nouvelle page s'ouvre, dans celle-ci vous aurez l’ensemble des formulaires
 !!! tip "Astuce de navigation"
     Ne lisez pas tout le code manuellement. Utilisez `Ctrl+F` (ou `Cmd+F` sur Mac) dans votre navigateur et tapez le nom de votre formulaire pour isoler immédiatement son bloc de données.
 
-**2. Configuration dans Excel**
-
-1. Ouvrez Excel, allez dans **Données** > **À partir du Web**.
-2. Collez l'URL.
+## 2. Configuration dans Microsoft Excel
+Ouvrez Excel, allez dans l'onglet **Données** > **À partir du Web**, puis collez l'URL récupérée.
 
 !!! danger "Le détail important"
     Il faut impérativement remplacer le `?format=json` à la fin de l'URL par `.xlsx`. Si vous oubliez, Excel va chercher à lire du code JSON au lieu d'un tableau structuré, et ça ne fonctionnera pas.
@@ -58,7 +52,8 @@ Excel vous montre un aperçu. Sélectionnez la feuille, cliquez sur **Charger**.
 
 ![Chargement des feuilles](../assets/kobo_api_v1/sheets_select.png)
 
-**3. Optimisation et gestion des accès**
+## 3. Optimisation et gestion des accès
+Une fois la connexion établie, quelques réglages permettent de stabiliser et de sécuriser votre flux de données :
 
 * **Nettoyage :** Utilisez **Power Query** (Données > Requêtes et connexions) pour virer les colonnes inutiles et typer vos dates/coordonnées.
 * **Actualisation :** Dans les "Propriétés de la requête", cochez "Actualiser lors de l'ouverture".
@@ -71,11 +66,11 @@ Excel vous montre un aperçu. Sélectionnez la feuille, cliquez sur **Charger**.
 
 ![Autorisations Kobo](../assets/kobo_api_v1/kobo_autorisation.png)
 
-### Résultats
-Vos données sont liées au serveur Kobo. Plus besoin d'exporter à la main : retournez dans l'onglet **Données** d'Excel, cliquez sur **Actualiser tout**, et votre rapport se met à jour.
+## Résultats et automatisation
+Vos données sont désormais liées au serveur Kobo. Plus besoin d'effectuer d'exports manuels : retournez simplement dans l'onglet **Données** d'Excel, cliquez sur **Actualiser tout**, et votre rapport se met à jour instantanément.
 
 ![Données chargées](../assets/kobo_api_v1/kobo_sync_RT.png)
 
-### Pour aller plus loin
+## Pour aller plus loin
 * [Documentation officielle de l'API Kobotoolbox](https://support.kobotoolbox.org/api.html)
 * Si les données sont confidentielles, laissez le projet privé et configurez une "Basic Auth" dans Excel avec vos identifiants Kobo au lieu d'ouvrir le partage public.

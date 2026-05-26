@@ -55,17 +55,8 @@ Tu y trouveras de la cartographie, du code, des réflexions de terrain. Et peut-
 
 **Abdou Aziz Darc** — géographe, technicien supérieur en géomatique et télépilote, basé à Diamniadio, Dakar.
 
-Au quotidien : 
-
-- je manipules des drones
-- je produis des cartes
-- j'analyse des données spatiales
-- j'écris du code pour automatiser ce qui peut l'être. 
-  
-QGIS, Python, Agisoft Metashape, Google Earth Engine. Toujours quelque chose de nouveau à apprendre.
-
-
-Pas un expert qui sait tout. Un praticien qui documente ce qu'il apprend.
+Mon quotidien se partage entre les vols de drones, la production cartographique, l'analyse spatiale et le développement de scripts d'automatisation. 
+Qu'il s'agisse de manipuler QGIS, Python, Agisoft Metashape ou Google Earth Engine, la démarche reste la même : **explorer et apprendre en continu**. L'objectif de cet espace n'est pas de poser en expert absolu, mais de partager humblement mes retours d'expérience et mes apprentissages de terrain.
 
 </div>
 <div class="about-image">

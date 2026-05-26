@@ -6,17 +6,13 @@ hide:
 
 # Réalisations
 
-Des années de terrain ont produit des cartes, des scripts, des orthophotos et des outils. Cette page en rassemble une partie — ce qui a été fait, comment, et avec quoi. Chaque réalisation est documentée pour être utile, pas seulement pour être montrée.
+Entre les relevés de terrain et les heures de traitement, on produit énormément de données : du code Python, des orthophotomosaïques, des bases de données spatiales. J'ai choisi de regrouper une partie de ces travaux ici. Pour chaque projet, vous trouverez la méthode, les outils et les résultats réels, l'objectif étant de partager une ressource technique directement exploitable.
 
 ---
 
 ## Projets 
 
-Des projets concrèts: 
-
-- du Sine-Saloum à Kolda, de la mangrove aux zones agricoles. 
-- De la Cartographie par drone, des analyses SIG, des levés topographiques, des études pédologiques. 
-- Des données collectées sur le terrain, traitées avec rigueur, restituées sous forme de cartes et de livrables exploitables.
+Mes interventions couvrent une diversité de territoires au Sénégal, depuis les mangroves du Sine-Saloum jusqu'aux périmètres agricoles de Kolda. Que ce soit par cartographie drone, analyse SIG, levé topographique ou étude pédologique, la démarche reste identique : transformer la donnée brute collectée sur le terrain en livrables géospatiaux précis et directement exploitables pour la prise de décision.
 
 {{ render_projects() }}
 
@@ -24,12 +20,6 @@ Des projets concrèts:
 
 ## Applications & Scripts
 
-Du code écrit pour résoudre de vrais problèmes:
-
-- automatiser un traitement répétitif
-- géocoder des milliers d'adresses
-- enchaîner un workflow photogrammétrique 
-- sans intervention manuelle. 
-Des outils modestes et documentés.
+Du code écrit pour répondre à des besoins précis. Cela va du script rapide conçu pour automatiser une tâche répétitive ou géocoder des milliers d'adresses, jusqu'à des applications plus complètes dédiées au suivi de projet ou à l'enchaînement de workflows photogrammétriques sans intervention manuelle. Ce sont des outils ciblés, pragmatiques et documentés, pensés pour fluidifier le traitement des données à grande échelle.
 
 {{ render_apps() }}
