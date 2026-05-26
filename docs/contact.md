@@ -10,9 +10,14 @@ Une mission, une collaboration, une question sur ce que vous avez trouvé ici. J
 
 ---
 
+<div class="contact-container" markdown="1">
 
 [Me laisser un mail :material-email:](mailto:darcman8@gmail.com){ .md-button .md-button--primary }
+
 [Visiter mon Github :fontawesome-brands-github:](https://github.com/darcman0){ .md-button .md-button--primary }
+
 [Visiter mon Gitlab :fontawesome-brands-gitlab:](https://gitlab.com/darcman0){ .md-button .md-button--primary }
+
 [Me retrouver sur Linkedin :fontawesome-brands-linkedin:](https://linkedin.com/in/abdou-aziz-darc){ .md-button .md-button--primary }
 
+</div>

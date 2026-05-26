@@ -147,3 +147,37 @@
 .img-clear {
   clear: both;
 }
+
+/* ---- CONTACT PAGE OPTIMIZATION ---- */
+.contact-container {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  max-width: 450px;
+  margin: 30px auto 0 auto;
+}
+
+/* Force les boutons MkDocs à occuper toute la largeur sur mobile */
+.contact-container .md-button {
+  width: 100%;
+  text-align: center;
+  box-sizing: border-box;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 !important;
+  padding: 12px;
+}
+
+/* Passage en mode ligne centré sur les écrans d'ordinateur */
+@media (min-width: 768px) {
+  .contact-container {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    max-width: 100%;
+  }
+  .contact-container .md-button {
+    width: auto;
+  }
+}
