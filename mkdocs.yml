@@ -69,6 +69,14 @@ plugins:
   - meta
   - mkdocs-jupyter
   - macros
+  - rss:
+      match_path: blog/posts/.*
+      date_from_meta:
+        as_creation: date.created
+        as_update: date.updated
+      categories:
+        - categories
+      comments_path: "#commentaires"
   - blog:
       archive_date_format: MM/yyyy
       archive_url_date_format: MM/yyyy
@@ -133,5 +141,8 @@ extra:
     - icon: fontawesome/brands/youtube
       link: https://www.youtube.com/channel/UCpCPomvreB7IL20DtQ7-F8Q
       name: YouTube
+    - icon: fontawesome/solid/rss
+      link: /feed_rss_created.xml
+      name: Flux RSS
 
 copyright: "Copyright &copy; 2025 Abdou Aziz Darc — Xootay Gox Yi"
