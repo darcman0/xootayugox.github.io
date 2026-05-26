@@ -6,20 +6,30 @@ hide:
 
 # Réalisations
 
-Projets terrain, scripts, outils et applications — du drone sur le terrain au code sur le serveur.
+Des années de terrain ont produit des cartes, des scripts, des orthophotos et des outils. Cette page en rassemble une partie — ce qui a été fait, comment, et avec quoi. Chaque réalisation est documentée pour être utile, pas seulement pour être montrée.
 
 ---
 
-## 🗺️ Projets terrain
+## Projets 
 
-Missions de cartographie drone, analyses SIG, études pédologiques, levés topographiques.
+Des projets concrèts: 
+
+- du Sine-Saloum à Kolda, de la mangrove aux zones agricoles. 
+- De la Cartographie par drone, des analyses SIG, des levés topographiques, des études pédologiques. 
+- Des données collectées sur le terrain, traitées avec rigueur, restituées sous forme de cartes et de livrables exploitables.
 
 {{ render_projects() }}
 
 ---
 
-## 🐍 Applications & Scripts
+## Applications & Scripts
 
-Scripts géospatiaux, outils d'automatisation et applications en développement — hébergés sur GitHub et GitLab.
+Du code écrit pour résoudre de vrais problèmes:
+
+- automatiser un traitement répétitif
+- géocoder des milliers d'adresses
+- enchaîner un workflow photogrammétrique 
+- sans intervention manuelle. 
+Des outils modestes et documentés.
 
 {{ render_apps() }}

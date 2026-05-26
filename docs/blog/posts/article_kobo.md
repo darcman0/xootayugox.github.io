@@ -3,81 +3,71 @@ date:
   created: 2025-05-18
 authors:
   - darc
+title: "Connexion API Kobotoolbox vers Excel"
 categories:
-  - Enquetes
+  - Enquêtes
   - Synchronisation
+description: "Guide technique pour automatiser la récupération de données Kobotoolbox vers Excel via l'API V1, éliminant les exports manuels répétitifs."
 ---
 
-# Connection de l'API V1 de Kobotoolbox avec Microsoft Excel
+# Connexion de l'API V1 de Kobotoolbox avec Microsoft Excel
 
+![Illustration](../assets/kobo_api_v1/article_presentation_img.jpg)
 
-![](../assets/kobo_api_v1/article_presentation_img.jpg){.img-center}
----
-Cela vous est-il déjà arrivé d’avoir la flemme de vous rendre sur le site de [Kobotoolbox](https://kc.kobotoolbox.org/) pour télécharger vos données issues de votre campagne de collecte?
-
-Si oui, voici un **_tips_** qui vous fera gagner énormément de temps.
-
+### Contexte et mise en œuvre
+On connaît tous la routine : se connecter à Kobo, exporter, nettoyer, puis importer dans Excel. C'est long, c'est pénible, et on finit toujours par travailler sur une version obsolète de la base. 
 <!-- more -->
+L'astuce ici, c'est d'utiliser l'API V1 de Kobotoolbox pour créer un pont direct entre le serveur et Excel.
 
-## API ?
-Pour cela on utilisera la première version de l’API de Kobotoolbox. Parlons d’abord de ce que c’est une API. Une API (application programming interface ou « interface de programmation d'application ») est une interface logicielle qui permet de « connecter » un logiciel ou un service à un autre logiciel ou  service afin d'échanger des données et des fonctionnalités (il y’a certains lecteurs dès qu’ils ont vu **_programming_**, ils sont passés à autre chose 😆).
+**1. Récupérer l'URL API**
 
-## Connexion au serveur de Kobotoolbox
-Concrètement, on va connecter le serveur de _**Kobotoolbox**_ à un logiciel (ici Microsoft excel) pour recevoir de manière automatique les données collectées.
+Connectez-vous à votre compte Kobo et allez ici : [https://kc.kobotoolbox.org/api/v1/data](https://kc.kobotoolbox.org/api/v1/data).
 
-!!! warning "Il faut d’abord se connecter sur votre compte _**Kobotoolbox**_ et se rendre a l'addresse suivante :"
-    https://kc.kobotoolbox.org/api/v1/data
+!!! tip "Pourquoi cette étape ?"
+    Cette page est le point de passage obligé pour récupérer l'identifiant unique (ID) de votre formulaire. Sans cet ID, impossible de générer le lien de connexion automatique.
 
-Cet URL va nous permettre d’accéder à la fenêtre de programmation de l’API.
+Cliquez sur la flèche à côté de **GET**, sélectionnez **JSON**. La liste de vos projets s'affiche. Copiez l'URL du projet cible :
+`https://kc.kobotoolbox.org/api/v1/data/1964678?format=json`
 
-![alt](../assets/kobo_api_v1/fenetre_API.png)
+![Fenetre API](../assets/kobo_api_v1/fenetre_API.png)
+![Selection JSON](../assets/kobo_api_v1/API_json.png)
 
-Il faut maintenant faire clique gauche sur la flèche à droite de GET et sélectionner json
+**2. Configuration dans Excel**
 
-  ![](../assets/kobo_api_v1/API_json.png){.img-center}
- 
+1. Ouvrez Excel, allez dans **Données** > **À partir du Web**.
+2. Collez l'URL.
 
+!!! danger "Le détail qui tue"
+    Il faut impérativement remplacer le `?format=json` à la fin de l'URL par `.xlsx`. Si vous oubliez, Excel va chercher à lire du code JSON au lieu d'un tableau structuré, et ça ne fonctionnera pas.
 
-Une nouvelle page s'ouvre, dans celle-ci vous aurez l’ensemble des formulaires que vous avez déployé
+![Configuration Web](../assets/kobo_api_v1/from_web_config.png)
 
-![](../assets/kobo_api_v1/formulaire_deploye.png){.img-center}
+Excel vous montre un aperçu. Sélectionnez la feuille, cliquez sur **Charger**.
 
-A ce niveau, moi j'ai trois formulaires déployés dont l’id est propre à chacun en plus il y a la description et le titre de chacun de ces formulaires mais aussi l’URL menant à chacun des formulaires.
+!!! success "Chargement réussi"
+    Si vous voyez vos données apparaître dans la feuille Excel, le pont est établi.
 
-!!! warning "Il faut copier l’URL du formulaire cible (dont on veut récupérer les données de manière automatique), ici moi je copie l’URL du projet : _**Test_api__V1**_"
-    https://kc.kobotoolbox.org/api/v1/data/1964678?format=json
+![Chargement des feuilles](../assets/kobo_api_v1/sheets_select.png)
 
-## Pont entre Excel et Kobotoolbox
+**3. Optimisation et gestion des accès**
 
-- Ensuite ouvrir le logiciel Microsoft excel 
+* **Nettoyage :** Utilisez **Power Query** (Données > Requêtes et connexions) pour virer les colonnes inutiles et typer vos dates/coordonnées.
+* **Actualisation :** Dans les "Propriétés de la requête", cochez "Actualiser lors de l'ouverture".
+* **Erreurs de connexion :** Si ça bloque, vérifiez les partages sur Kobo.
 
-- Puis se rendre sur le menu data ou donnée ( en fonction de la langue du système)
+!!! warning "Le piège classique"
+    Si Excel rejette la connexion, c'est presque toujours parce que le projet est en accès "Privé". Allez dans **Paramètres > Partage** sur Kobo et vérifiez que :
+    - "N'importe qui peut afficher ce formulaire" est coché.
+    - "N'importe qui peut afficher les soumissions" est coché.
 
-- Cliquez sur From web ou à partir du web
-  
-![](../assets/kobo_api_v1/from_web_excel.png){.img-center}
+![Autorisations Kobo](../assets/kobo_api_v1/kobo_autorisation.png)
 
-!!! warning "Dans la nouvelle fenêtre qui s’ouvre, il faut collé l’URL qui a été auparavant copié à partir de la page de l’API." 
-    Mais en écrivant à la place de **?format=json** : _**.XLSX**_ et cliquer sur OK
+### Résultats
+Vos données sont liées au serveur Kobo. Plus besoin d'exporter à la main : retournez dans l'onglet **Données** d'Excel, cliquez sur **Actualiser tout**, et votre rapport se met à jour.
 
-![](../assets/kobo_api_v1/from_web_config.png){.img-center}
+![Données chargées](../assets/kobo_api_v1/kobo_sync_RT.png)
 
-Après cela une fenêtre permettant de voir les données de notre formulaire cible s’ouvre, faut sélectionner la feuille (avec les caractéres alphanumériques mélangés) et cliquer sur _LOAD_ 
+### Pour aller plus loin
 
-![](../assets/kobo_api_v1/sheets_select.png)
-
-!!! success "La magie devrait s'opérer 🎉"
-
-![](../assets/kobo_api_v1/kobo_sync_RT.png)
-
-Sinon, si un message d’erreur apparaît, il frauda juste se rendre sur votre compte Kobotoolbox et naviguer à partir du formulaire (dont vous voulez récupérer les données) vers **PARAMÈTRES** PUIS **Partage** et s’assurer que soit cochez les cases :
-
-!!! warning "Bien cochez"
-    !!! success "Cochez"
-        N’importe qui peut afficher ce formulaire 
-    
-        N’importe qui peut afficher les soumissions de ce formulaire
-
-![](../assets/kobo_api_v1/kobo_autorisation.png)
-
-Essayez d'actualiser votre logiciel Excel à partir du menu Data ou Donnée et le tour devrait être joué. J’espère que vous y êtes parvenu. Sinon contactez moi, je serai ravie de vous aiguiller.
+* [Documentation officielle de l'API Kobotoolbox](https://support.kobotoolbox.org/api.html)
+* Si les données sont confidentielles, laissez le projet privé et configurez une "Basic Auth" dans Excel avec vos identifiants Kobo au lieu d'ouvrir le partage public.

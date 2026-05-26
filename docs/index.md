@@ -6,7 +6,7 @@ hide:
 
 ## Xootay Gox Yi
 
-> _**Xootay**_, En wolof, xootay désigne la profondeur. Parce qu'un territoire mérite mieux qu'un regard superficiel — il se lit dans ses sols, ses eaux, ses limites invisibles.
+> _**Xootay**_, En wolof, cela désigne la profondeur. Parce qu'un territoire mérite mieux qu'un regard superficiel. Il se lit dans ses sols, ses eaux, ses limites invisibles.
 
 > _**Gox yi**_, ce sont les territoires: ces espaces que l'on arpente, que l'on survole, que l'on mesure.
 
@@ -53,9 +53,17 @@ Tu y trouveras de la cartographie, du code, des réflexions de terrain. Et peut-
 <div class="about-section" markdown>
 <div class="about-text" markdown>
 
-**Abdou Aziz Darc** — géographe, technicien supérieur en géomatique et télépilote, basé à Diamniadio, Dakar. Cinq ans de terrain au Sénégal et en Afrique de l'Ouest, du Sine-Saloum à Kolda, du LIDAR à la cartographie pédologique.
+**Abdou Aziz Darc** — géographe, technicien supérieur en géomatique et télépilote, basé à Diamniadio, Dakar.
 
-Au quotidien : je vole des drones, je produis des cartes, j'analyse des données spatiales, j'écris du code pour automatiser ce qui peut l'être. QGIS, Python, Agisoft Metashape, Google Earth Engine. Toujours quelque chose de nouveau à apprendre.
+Au quotidien : 
+
+- je manipules des drones
+- je produis des cartes
+- j'analyse des données spatiales
+- j'écris du code pour automatiser ce qui peut l'être. 
+  
+QGIS, Python, Agisoft Metashape, Google Earth Engine. Toujours quelque chose de nouveau à apprendre.
+
 
 Pas un expert qui sait tout. Un praticien qui documente ce qu'il apprend.
 
