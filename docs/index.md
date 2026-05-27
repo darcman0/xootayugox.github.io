@@ -2,22 +2,23 @@
 hide:
   - toc
   - navigation
-title: "Xootay Gox Yi | Géomatique, Cartographie & Photogrammétrie — Abdou Aziz Darc"
-description: "Portfolio et carnet de bord d'Abdou Aziz Darc. Retours d'expérience terrain et outils d'automatisation : SIG, photogrammétrie par drone et télédétection."
+title: "Xootay Gox Yi | Géomatique, Cartographie & Photogrammétrie"
+description: "Xootay Gox Yi (la profondeur des territoires). Plateforme dédiée à la géomatique : interventions drone, cartographie et analyse spatiale."
 ---
 
 ## Xootay Gox Yi
 
-> _**Xootay**_, En wolof, cela désigne la profondeur. Parce qu'un territoire mérite mieux qu'un regard superficiel. Il se lit dans ses sols, ses eaux, ses limites invisibles.
+**_Xootay_**, en wolof, désigne la profondeur. Parce qu'un territoire mérite bien plus qu'un simple regard superficiel : il se lit à travers ses sols, ses eaux et ses limites invisibles. 
 
-> _**Gox yi**_, ce sont les territoires: ces espaces que l'on arpente, que l'on survole, que l'on mesure.
+**_Gox yi_**, ce sont les territoires. Ces espaces physiques que l'on arpente sur le terrain, que l'on survole par drone et que l'on mesure avec précision.
 
-Mais un territoire ne se réduit pas à ses coordonnées. Il y a ce que la carte montre, et ce qu'elle ne dit pas encore. La texture du sol sous le drone, l'eau qui chemine sous la forêt de mangrove, la parcelle d'un paysan qui attend d'être reconnue.
-Ce site est une tentative modeste de saisir tout ça. Pas un portfolio parfait, mais un carnet de bord honnête : des projets, des outils, des erreurs, des apprentissages. Ce que je fais, comment je le fais, et pourquoi ça compte. Ici, au Sénégal, en Afrique de l'Ouest.
-Tu y trouveras de la cartographie, du code, des réflexions de terrain. Et peut-être, entre les lignes, quelque chose sur ce que signifie aller au fond d'un territoire.
+Un territoire ne se réduit jamais à ses simples coordonnées géographiques. Il y a ce que la carte officielle affiche, et tout ce qu'elle ne dit pas encore. La texture d'un sol captée par photogrammétrie, le réseau hydrologique qui chemine sous une forêt de mangrove, ou la parcelle agricole qui attend d'être intégrée au cadastre.
+
+Ce site constitue un espace de documentation et d'analyse technique : vous y trouverez des protocoles détaillés, des outils d'automatisation, des erreurs décortiquées et nos apprentissages continus. Ce que nous faisons, comment nous le faisons, et pourquoi cela compte. Ici, au Sénégal, et plus largement en Afrique de l'Ouest.
+
+La science et la gestion territoriale étant des démarches fondamentalement collectives, cette plateforme dépasse la simple vitrine personnelle. Vous y découvrirez des projets menés en équipe, ainsi que des articles corédigés, reflétant toute la richesse des échanges interdisciplinaires qui nourrissent notre pratique de la géomatique.
 
 ---
-
 ## Ce que vous trouverez ici
 
 <div class="grid cards" markdown>
