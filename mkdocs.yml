@@ -112,18 +112,18 @@ nav:
   - Réalisations:
     - "Mes réalisations": realisations/index.md
     # Ajouter ici les projets .md et .ipynb 
-    - "mangrove": realisations/projects/mangroves-weforest.md
-    - "sample project": realisations/projects/project.md
-    - "sample nootebook": realisations/projects/notebook.ipynb
-    - "project 4": realisations/projects/centrale-pv-kolda.ipynb
-    - "project 5": realisations/projects/pedologie-senegal.ipynb
+    #- "mangrove": realisations/projects/mangroves-weforest.md
+    #- "sample project": realisations/projects/project.md
+    #- "sample nootebook": realisations/projects/notebook.ipynb
+    #- "project 4": realisations/projects/centrale-pv-kolda.ipynb
+    #- "project 5": realisations/projects/pedologie-senegal.ipynb
 
     # Ajouter ici les apps .md et .ipynb
-    - "Geocoding SN": realisations/apps/test_1.md
-    - "Analyse NDVI": realisations/apps/test_2.ipynb
-    - "App 3": realisations/apps/metashape-batch.ipynb
-    - "App 4": realisations/apps/pyqgis-pdf-exporter.md
-    - "App 5": realisations/apps/webgis-viewer.ipynb
+    #- "Geocoding SN": realisations/apps/test_1.md
+    #- "Analyse NDVI": realisations/apps/test_2.ipynb
+    #- "App 3": realisations/apps/metashape-batch.ipynb
+    #- "App 4": realisations/apps/pyqgis-pdf-exporter.md
+    #- "App 5": realisations/apps/webgis-viewer.ipynb
 
   - Publications: publications.md
 
@@ -151,4 +151,4 @@ extra:
       link: /feed_rss_created.xml
       name: Flux RSS
 
-copyright: "Copyright &copy; 2025 Abdou Aziz Darc — Xootay Gox Yi"
+copyright: "Copyright &copy; 2026 Abdou Aziz Darc — Xootay Gox Yi"
